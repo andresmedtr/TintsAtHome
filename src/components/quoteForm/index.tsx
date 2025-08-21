@@ -31,9 +31,16 @@ export const QuoteForm = () => {
   // Submit form through emailJs
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    window.dataLayer = window.dataLayer || [];
     setIsLoading(true);
     try {
       await sendEmail(form);
+      // Push data to Google Tag Manager
+      window.dataLayer.push({
+        event: "lead_form_success",
+        userEmail: form.email,
+        userPhone: form.phone,
+      });
       setSubmitResult(true);
       setForm({
         firstName: "",
@@ -49,6 +56,10 @@ export const QuoteForm = () => {
       }, 20000);
     } catch (error) {
       console.error(error);
+      window.dataLayer.push({
+        event: "lead_form_error",
+        errorMessage: error || "Unknown error",
+      });
       setSubmitResult(false);
       setIsLoading(false);
     } finally {
