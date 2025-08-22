@@ -15,6 +15,12 @@ export const SocialMediaButton = ({ type }: { type: SocialMediaType }) => {
       type="button"
       icon={media.icon}
       onClick={() => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "social_click",
+          social_type: type,
+          social_target: media.target,
+        });
         scrollToView(media.target);
       }}
     />

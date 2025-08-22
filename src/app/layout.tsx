@@ -7,6 +7,7 @@ import { SwitchProvider } from "@/provider/switch";
 import { TintProvider } from "@/provider/tint";
 import { Footer } from "@/components/footer";
 import { GoogleTagManager } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/next";
 
 export const viewport = {
   themeColor: "#E52323",
@@ -59,6 +60,7 @@ export default function RootLayout({
             <TintProvider>
               <Navbar />
               <div className="max-w-[2000px] w-full">{children}</div>
+              <Analytics />
               <Footer />
             </TintProvider>
           </SwitchProvider>
