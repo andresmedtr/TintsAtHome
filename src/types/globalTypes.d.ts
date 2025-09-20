@@ -22,7 +22,9 @@ export interface TintLevelProps {
 }
 
 export interface CardProps {
-  image?: string;
+  img: string;
+  classes?: string;
+  children?: ReactNode;
   title?: string;
   price?: string;
   subtitle?: string;
@@ -140,4 +142,12 @@ export interface CarWashContent {
   title: string;
   description: string;
   icon: ReactNode;
+}
+
+export interface Service {
+  service: string;
+  title: string;
+  image: string;
+  benefits: string[];
+  threeDModel?: string;
 }

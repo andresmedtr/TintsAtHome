@@ -11,9 +11,11 @@ export const Navbar = () => {
           <Link href="/">
             <Image
               src="/logo/logo2.png"
+              priority
               width={100}
               height={100}
               alt="TintBiz logo Navbar"
+              sizes="(max-width: 768px) 80px, 100px"
               className="w-fit h-full"
             />
           </Link>
