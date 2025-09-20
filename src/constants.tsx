@@ -8,14 +8,16 @@ import {
   SocialMediaType,
   LegalTermsProps,
   CarWashContent,
+  Service,
 } from "./types/globalTypes";
 import ShieldOutlinedIcon from "@mui/icons-material/ShieldOutlined";
 import DiamondOutlinedIcon from "@mui/icons-material/DiamondOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
+import { image } from "framer-motion/client";
 
-export const NavbarFIelds: string[] = [
+export const NavbarFields: string[] = [
   "navbar.title.home",
-  "navbar.title.benefits",
+  "navbar.title.services",
   "navbar.title.about",
   "navbar.title.Contact",
 ];
@@ -231,18 +233,66 @@ export const refundTerms: LegalTermsProps[] = [
   { title: "refund.5.title", description: "refund.5.description" },
 ];
 
+// Services block
 export const carBenefits: string[] = [
-  "block.benefits.card.car.1",
-  "block.benefits.card.car.2",
-  "block.benefits.card.car.3",
-  "block.benefits.card.car.4",
+  "block.services.card.car.1",
+  "block.services.card.car.2",
+  "block.services.card.car.3",
+  "block.services.card.car.4",
 ];
 
 export const houseBenefits: string[] = [
-  "block.benefits.card.house.1",
-  "block.benefits.card.house.2",
-  "block.benefits.card.house.3",
-  "block.benefits.card.house.4",
+  "block.services.card.house.1",
+  "block.services.card.house.2",
+  "block.services.card.house.3",
+  "block.services.card.house.4",
+];
+export const commercialBenefits: string[] = [
+  "block.services.card.commercial.1",
+  "block.services.card.commercial.2",
+  "block.services.card.commercial.3",
+  "block.services.card.commercial.4",
+];
+export const ppfBenefits: string[] = [
+  "block.services.card.ppf.1",
+  "block.services.card.ppf.2",
+  "block.services.card.ppf.3",
+  "block.services.card.ppf.4",
+];
+
+export const servicesArray: Service[] = [
+  {
+    service: "automotive-tinting",
+    title: "Automotive Tinting",
+    image: "/services/servicesCar.webp",
+    benefits: carBenefits,
+    threeDModel:
+      "https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/g_wagon-Lng1Z2L9WuWNGZXVDsKZhcHQUlFf0o.glb",
+  },
+  {
+    service: "paint-protection-film",
+    title: "Paint Protection Film",
+    image: "/services/servicesPpf.webp",
+    benefits: ppfBenefits,
+    threeDModel:
+      "https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/g_wagon-Lng1Z2L9WuWNGZXVDsKZhcHQUlFf0o.glb",
+  },
+  {
+    service: "residential-tinting",
+    title: "Residential Tinting",
+    image: "/services/servicesHouse.webp",
+    benefits: houseBenefits,
+    threeDModel:
+      "https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/house/house-GP4Zwy8YteIEFs1sAcyredbr91cvN9.glb",
+  },
+  {
+    service: "commercial-tinting",
+    title: "Commercial Tinting",
+    image: "/services/servicesCommercial.webp",
+    benefits: commercialBenefits,
+    threeDModel:
+      "https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/house/house-GP4Zwy8YteIEFs1sAcyredbr91cvN9.glb",
+  },
 ];
 
 export const carWashServices: CarWashContent[] = [
@@ -262,3 +312,4 @@ export const carWashServices: CarWashContent[] = [
     icon: <DiamondOutlinedIcon fontSize="large" className="text-[#b9f2ff]" />,
   },
 ];
+// End Services block
