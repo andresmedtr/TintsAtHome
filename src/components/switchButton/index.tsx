@@ -1,8 +1,6 @@
 "use client";
 
 import { FormControlLabel, styled, Switch, SwitchProps } from "@mui/material";
-import DriveEtaOutlinedIcon from "@mui/icons-material/DriveEtaOutlined";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import { useSwitch } from "@/hooks/useToggle";
 
 const IOSSwitch = styled((props: SwitchProps) => (

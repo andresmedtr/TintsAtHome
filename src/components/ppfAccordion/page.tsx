@@ -2,9 +2,7 @@
 
 import { ppfColors } from "@/constants";
 import { AccordionDetails } from "@mui/material";
-import { ExpandMore } from "@mui/icons-material";
-import { Accordion, AccordionSummary } from "@mui/material";
-import { FormattedMessage } from "react-intl";
+import { Accordion } from "@mui/material";
 import { rgbaToCss } from "@/utils/colorChange";
 import { usePPF } from "@/hooks/usePpf";
 

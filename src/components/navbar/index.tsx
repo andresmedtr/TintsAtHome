@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { SwitchButton } from "../switchButton";
 import { NavigationButtons } from "../navigation";
 import Link from "next/link";
 
