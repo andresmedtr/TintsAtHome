@@ -1,4 +1,6 @@
-import ServiceDetailClient from "@/components/serviceDetails";
+import ServiceDetails from "@/components/serviceDetails/page";
+import { ContactUs } from "@/blocks/contactUs";
+import { FloatingButton } from "@/components/floatingButton";
 import { servicesArray } from "@/constants";
 
 type Props = {
@@ -14,5 +16,11 @@ export default async function ServicePage({ params }: Props) {
     return <p className="p-6 text-red-600">Service not found</p>;
   }
 
-  return <ServiceDetailClient service={service} />;
+  return (
+    <>
+      <FloatingButton />
+      <ServiceDetails />
+      <ContactUs />
+    </>
+  );
 }

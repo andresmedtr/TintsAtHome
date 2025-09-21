@@ -21,8 +21,13 @@ export interface TintLevelProps {
   opacity: number;
 }
 
+export interface PPFContextType {
+  color: [number, number, number, number]; // RGBA
+  setColor: (color: [number, number, number, number]) => void;
+}
+
 export interface CardProps {
-  img: string;
+  img?: string;
   classes?: string;
   children?: ReactNode;
   title?: string;
@@ -30,6 +35,14 @@ export interface CardProps {
   subtitle?: string;
   features?: string[];
   iconList?: { icon: JSX.Element; text: string }[];
+}
+
+export interface HeroSectionProps {
+  titleId: string;
+  buttonId: string;
+  modelSrc: string;
+  tintName?: string;
+  children?: React.ReactNode;
 }
 
 export interface ImagesProps {

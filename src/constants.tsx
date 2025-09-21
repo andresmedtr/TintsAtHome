@@ -234,6 +234,40 @@ export const refundTerms: LegalTermsProps[] = [
 ];
 
 // Services block
+
+export const ppfColors: [number, number, number, number][] = [
+  [17 / 255, 17 / 255, 17 / 255, 1], // #111111
+  [1, 1, 1, 1], // #FFFFFF
+  [51 / 255, 51 / 255, 51 / 255, 1], // #333333
+  [229 / 255, 35 / 255, 35 / 255, 1], // #E52323
+  [179 / 255, 0, 0, 1], // #B30000
+  [242 / 255, 242 / 255, 242 / 255, 1], // #F2F2F2
+  [255 / 255, 215 / 255, 0, 1], // #FFD700
+  [255 / 255, 165 / 255, 0, 1], // #FFA500
+  [255 / 255, 69 / 255, 0, 1], // #FF4500
+  [139 / 255, 0, 0, 1], // #8B0000
+  [128 / 255, 0, 128 / 255, 1], // #800080
+  [75 / 255, 0, 130 / 255, 1], // #4B0082
+  [0, 0, 1, 1], // #0000FF
+  [30 / 255, 144 / 255, 255 / 255, 1], // #1E90FF
+  [0, 206 / 255, 209 / 255, 1], // #00CED1
+  [0, 128 / 255, 128 / 255, 1], // #008080
+  [0, 100 / 255, 0, 1], // #006400
+  [34 / 255, 139 / 255, 34 / 255, 1], // #228B22
+  [50 / 255, 205 / 255, 50 / 255, 1], // #32CD32
+  [173 / 255, 255 / 255, 47 / 255, 1], // #ADFF2F
+  [128 / 255, 128 / 255, 0, 1], // #808000
+  [160 / 255, 82 / 255, 45 / 255, 1], // #A0522D
+  [210 / 255, 105 / 255, 30 / 255, 1], // #D2691E
+  [244 / 255, 164 / 255, 96 / 255, 1], // #F4A460
+  [192 / 255, 192 / 255, 192 / 255, 1], // #C0C0C0
+  [169 / 255, 169 / 255, 169 / 255, 1], // #A9A9A9
+  [112 / 255, 128 / 255, 144 / 255, 1], // #708090
+  [47 / 255, 79 / 255, 79 / 255, 1], // #2F4F4F
+  [255 / 255, 105 / 255, 180 / 255, 1], // #FF69B4
+  [255 / 255, 20 / 255, 147 / 255, 1], // #FF1493
+];
+
 export const carBenefits: string[] = [
   "block.services.card.car.1",
   "block.services.card.car.2",
@@ -263,23 +297,23 @@ export const ppfBenefits: string[] = [
 export const servicesArray: Service[] = [
   {
     service: "automotive-tinting",
-    title: "Automotive Tinting",
-    image: "/services/servicesCar.webp",
+    title: "block.services.card.title.car.1",
+    image: "/services/photoTest.avif",
     benefits: carBenefits,
     threeDModel:
       "https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/g_wagon-Lng1Z2L9WuWNGZXVDsKZhcHQUlFf0o.glb",
   },
   {
     service: "paint-protection-film",
-    title: "Paint Protection Film",
-    image: "/services/servicesPpf.webp",
+    title: "block.services.card.title.ppf.1",
+    image: "/services/ppf.jpeg",
     benefits: ppfBenefits,
     threeDModel:
-      "https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/g_wagon-Lng1Z2L9WuWNGZXVDsKZhcHQUlFf0o.glb",
+      "https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/car/g_wagon_ppf.glb",
   },
   {
     service: "residential-tinting",
-    title: "Residential Tinting",
+    title: "block.services.card.title.house.1",
     image: "/services/servicesHouse.webp",
     benefits: houseBenefits,
     threeDModel:
@@ -287,11 +321,11 @@ export const servicesArray: Service[] = [
   },
   {
     service: "commercial-tinting",
-    title: "Commercial Tinting",
+    title: "block.services.card.title.commercial.1",
     image: "/services/servicesCommercial.webp",
     benefits: commercialBenefits,
     threeDModel:
-      "https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/house/house-GP4Zwy8YteIEFs1sAcyredbr91cvN9.glb",
+      "https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/commercial/commercialRed.glb",
   },
 ];
 

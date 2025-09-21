@@ -21,7 +21,7 @@ export const Services = () => {
       <div className="w-full h-fit flex flex-col gap-5 justify-evenly items-center md:flex-row">
         {servicesArray.map((service) => (
           <Link key={service.service} href={`/services/${service.service}`}>
-            <h3>
+            <h3 className="text-xl font-bold text-white mb-4 text-center">
               <FormattedMessage id={service.title} />
             </h3>
             <Card img={service.image} key={service.service}>

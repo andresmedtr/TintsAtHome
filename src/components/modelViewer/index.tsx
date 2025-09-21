@@ -1,6 +1,7 @@
 "use client";
 
 import { useTint } from "@/hooks/useTint";
+import { usePPF } from "@/hooks/usePpf";
 import { ModelViewerElement, ModelViewerProps } from "@/types/globalTypes";
 import "@google/model-viewer/lib/model-viewer";
 import { useEffect, useRef, useState } from "react";
@@ -15,9 +16,10 @@ function ModelViewer({
 }: ModelViewerProps) {
   const modelRef = useRef<ModelViewerElement | null>(null);
   const { opacity } = useTint();
+  const { color } = usePPF();
   const [loading, setLoading] = useState(true);
 
-  const isCar = src.includes("g_wagon");
+  const isHouse = src.includes("house");
 
   useEffect(() => {
     setLoading(true);
@@ -36,16 +38,20 @@ function ModelViewer({
   useEffect(() => {
     const viewer = modelRef.current;
 
-    const applyTint = () => {
+    const applyMaterials = () => {
       const materials = viewer?.model?.materials;
       if (!materials) return;
 
       const tintMat = materials.find((mat) =>
-        ["Car_Glasses", "House_Glasses"].includes(mat.name)
+        ["Car_Glasses", "House_Glasses", "commercial_glass"].includes(mat.name)
       );
 
       if (tintMat) {
         tintMat.pbrMetallicRoughness.setBaseColorFactor([0, 0, 0, opacity]);
+      }
+      const paintMat = materials.find((mat) => mat.name === "Car_Paint");
+      if (paintMat) {
+        paintMat.pbrMetallicRoughness.setBaseColorFactor(color);
       }
     };
 
@@ -55,13 +61,13 @@ function ModelViewer({
         Array.isArray(viewer.model.materials) &&
         viewer.model.materials.length > 0
       ) {
-        applyTint();
+        applyMaterials();
         clearInterval(interval);
       }
     }, 100);
 
     return () => clearInterval(interval);
-  }, [opacity]);
+  }, [opacity, color]);
 
   return (
     <div className="relative w-fit h-fit">
@@ -81,9 +87,9 @@ function ModelViewer({
         ar={ar}
         class={className}
         disable-zoom
-        camera-orbit={!isCar ? "0deg 90deg 250m" : "0deg 90deg 40m"}
+        camera-orbit={isHouse ? "0deg 90deg 250m" : "0deg 90deg 40m"}
         min-camera-orbit="auto 90deg 25m"
-        max-camera-orbit={!isCar ? "auto 90deg 250m" : "auto 90deg 50m"}
+        max-camera-orbit={isHouse ? "auto 90deg 250m" : "auto 90deg 50m"}
       />
     </div>
   );

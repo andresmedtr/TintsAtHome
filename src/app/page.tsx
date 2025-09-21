@@ -1,5 +1,5 @@
 import { ContactUs } from "@/blocks/contactUs";
-import { Model3D } from "@/blocks/model3D";
+import { Model3D } from "@/blocks/hero";
 import { AboutUs } from "@/blocks/aboutUs";
 import { Services } from "@/blocks/services";
 import { FloatingButton } from "@/components/floatingButton";
