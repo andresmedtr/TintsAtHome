@@ -13,7 +13,6 @@ import {
 import ShieldOutlinedIcon from "@mui/icons-material/ShieldOutlined";
 import DiamondOutlinedIcon from "@mui/icons-material/DiamondOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
-import { image } from "framer-motion/client";
 
 export const NavbarFields: string[] = [
   "navbar.title.home",
