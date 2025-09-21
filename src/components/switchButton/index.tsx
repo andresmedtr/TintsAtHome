@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { FormControlLabel, styled, Switch, SwitchProps } from "@mui/material";
 import DriveEtaOutlinedIcon from "@mui/icons-material/DriveEtaOutlined";
@@ -54,7 +54,7 @@ const IOSSwitch = styled((props: SwitchProps) => (
   },
   "& .MuiSwitch-track": {
     borderRadius: 26 / 2,
-    backgroundColor: "#4B5563",
+    backgroundColor: "#040404",
     opacity: 1,
     transition: theme.transitions.create(["background-color"], {
       duration: 500,
@@ -70,27 +70,29 @@ export const SwitchButton = () => {
 
   return (
     <div className="w-fit h-full flex flex-row items-center">
-      <HomeOutlinedIcon
-        className={`w-[24px] h-[24px] transition-all duration-500 ease-in-out ${
-          isActive ? "text-white" : "text-[#E52323]"
-        }`}
-      />
+      <p
+        className={`w-fit h-full transition-all duration-800 ease-in-out   ${
+          isActive
+            ? "text-gray-200 font-light text-sm"
+            : "text-[#E52323] font-semibold 2xl:text-2xl text-lg"
+        }`}>
+        Window Tints
+      </p>
       <FormControlLabel
         control={
-          <IOSSwitch
-            sx={{ m: 1 }}
-            checked={isActive}
-            onChange={toggle}
-          />
+          <IOSSwitch sx={{ m: 1 }} checked={isActive} onChange={toggle} />
         }
         label=""
         sx={{ margin: 0 }}
       />
-      <DriveEtaOutlinedIcon
-        className={`w-[24px] h-[24px] transition-all duration-500 ease-in-out ${
-          !isActive ? "text-white" : "text-[#E52323]"
-        }`}
-      />
+      <p
+        className={`w-fit h-[24px] transition-all duration-500 ease-in-out  ${
+          !isActive
+            ? "text-gray-200 font-light text-sm"
+            : "text-[#E52323] font-semibold 2xl:text-2xl text-lg"
+        }`}>
+        Paint Protection Film
+      </p>
     </div>
   );
 };

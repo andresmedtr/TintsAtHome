@@ -27,10 +27,10 @@ export const Services = () => {
             <Card img={service.image} key={service.service}>
               <div className="flex flex-col gap-8 p-6">
                 {service.benefits.map((id) => (
-                  <div
-                    key={id}
-                    className="text-base leading-relaxed text-white/90">
-                    <FormattedMessage id={id} />
+                  <div key={id} className="leading-relaxed text-white/90">
+                    <p className="text-md font-semibold">
+                      <FormattedMessage id={id} />
+                    </p>
                   </div>
                 ))}
               </div>

@@ -13,7 +13,7 @@ export function PpfAccordion() {
 
   return (
     <Accordion className="border-b-1 border-gray-200 block">
-      <AccordionSummary
+      {/* <AccordionSummary
         expandIcon={<ExpandMore />}
         aria-controls="panel1-content"
         id="panel1-header"
@@ -21,7 +21,7 @@ export function PpfAccordion() {
         <p className="text-[#111111] font-semibold transition-all group-hover:underline group-hover:decoration-[#E52323]">
           <FormattedMessage id="block.model3d.square.ppf.accordion" />
         </p>
-      </AccordionSummary>
+      </AccordionSummary> */}
       <AccordionDetails>
         <div className="grid grid-cols-10 xl:grid-cols-15 gap-2 place-items-center">
           {ppfColors.map((rgba, idx) => (

@@ -297,7 +297,7 @@ export const servicesArray: Service[] = [
   {
     service: "automotive-tinting",
     title: "block.services.card.title.car.1",
-    image: "/services/photoTest.avif",
+    image: "/services/tinting.png",
     benefits: carBenefits,
     threeDModel:
       "https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/g_wagon-Lng1Z2L9WuWNGZXVDsKZhcHQUlFf0o.glb",
@@ -321,7 +321,7 @@ export const servicesArray: Service[] = [
   {
     service: "commercial-tinting",
     title: "block.services.card.title.commercial.1",
-    image: "/services/servicesCommercial.webp",
+    image: "/services/commercial.png",
     benefits: commercialBenefits,
     threeDModel:
       "https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/commercial/commercialRed.glb",

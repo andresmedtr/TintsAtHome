@@ -20,10 +20,9 @@ export const Navbar = () => {
             />
           </Link>
         </div>
-        <div className="w-fit h-full flex-row items-center gap-[50px] hidden md:flex">
+        <div className="w-fit h-full flex-row items-center gap-[50px] hidden md:flex m-auto">
           <NavigationButtons />
         </div>
-        <SwitchButton />
       </div>
       <div className="flex flex-row w-full h-fit pb-[20px] justify-evenly bg-[#111111] md:hidden">
         <NavigationButtons />
