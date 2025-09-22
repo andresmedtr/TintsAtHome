@@ -23,7 +23,7 @@ export const Navbar = () => {
           <NavigationButtons />
         </div>
       </div>
-      <div className="flex flex-row w-full h-fit pb-[20px] justify-evenly bg-[#111111] md:hidden">
+      <div className="flex flex-row w-full h-full pb-[20px] justify-evenly bg-[#111111] md:hidden m-auto">
         <NavigationButtons />
       </div>
     </nav>

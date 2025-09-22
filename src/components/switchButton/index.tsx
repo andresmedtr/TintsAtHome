@@ -71,7 +71,7 @@ export const SwitchButton = () => {
       <p
         className={`w-fit h-full transition-all duration-800 ease-in-out   ${
           isActive
-            ? "text-gray-200 font-light text-sm"
+            ? "text-gray-500 font-light text-sm"
             : "text-[#E52323] font-semibold 2xl:text-2xl text-lg"
         }`}>
         Window Tints
@@ -86,7 +86,7 @@ export const SwitchButton = () => {
       <p
         className={`w-fit h-[24px] transition-all duration-500 ease-in-out  ${
           !isActive
-            ? "text-gray-200 font-light text-sm"
+            ? "text-gray-500 font-light text-sm"
             : "text-[#E52323] font-semibold 2xl:text-2xl text-lg"
         }`}>
         Paint Protection Film
