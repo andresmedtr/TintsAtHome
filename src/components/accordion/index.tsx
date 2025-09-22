@@ -8,7 +8,7 @@ export const TintAccordion = () => {
   const { tintName, tintDescription } = useTint();
   return (
     <>
-      <Accordion className="border-b-1 border-gray-200 hidden lg:block">
+      <Accordion className="border-b-1 border-gray-200 hidden xl:block">
         <AccordionSummary
           expandIcon={<ExpandMore />}
           aria-controls="panel1-content"
@@ -38,7 +38,7 @@ export const TintAccordion = () => {
           </ChooseTInts>
         </AccordionDetails>
       </Accordion>
-      <div className="w-full flex overflow-x-auto md:hidden px-2 gap-2">
+      <div className="w-full flex overflow-x-auto xl:hidden px-2 gap-2">
         <ChooseTInts>
           {({ name, tone }) => (
             <>

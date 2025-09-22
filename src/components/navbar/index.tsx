@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { SwitchButton } from "../switchButton";
 import { NavigationButtons } from "../navigation";
 import Link from "next/link";
 
@@ -11,19 +10,20 @@ export const Navbar = () => {
           <Link href="/">
             <Image
               src="/logo/logo2.png"
+              priority
               width={100}
               height={100}
               alt="TintBiz logo Navbar"
+              sizes="(max-width: 768px) 80px, 100px"
               className="w-fit h-full"
             />
           </Link>
         </div>
-        <div className="w-fit h-full flex-row items-center gap-[50px] hidden md:flex">
+        <div className="w-fit h-full flex-row items-center gap-[50px] hidden md:flex m-auto">
           <NavigationButtons />
         </div>
-        <SwitchButton />
       </div>
-      <div className="flex flex-row w-full h-fit pb-[20px] justify-evenly bg-[#111111] md:hidden">
+      <div className="flex flex-row w-full h-full pb-[20px] justify-evenly bg-[#111111] md:hidden m-auto">
         <NavigationButtons />
       </div>
     </nav>

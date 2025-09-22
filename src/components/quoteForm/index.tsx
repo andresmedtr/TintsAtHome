@@ -2,12 +2,15 @@
 
 import { useState } from "react";
 import { sendEmail } from "@/service/emailjs";
+import { Phone } from "@mui/icons-material";
 import { QuoteFormValues } from "@/types/globalTypes";
 import { FormattedMessage } from "react-intl";
-import { inputFields } from "@/constants";
+import { contactInfo, inputFields } from "@/constants";
 import { CustomButton } from "../customButton";
-
+import { scrollToView } from "@/utils/scrollToView";
+import { getSocialMediaMap } from "@/utils/getSocialMediaMap";
 export const QuoteForm = () => {
+  const iconsInformation = getSocialMediaMap();
   // Initial form state
   const [form, setForm] = useState<QuoteFormValues>({
     firstName: "",
@@ -122,18 +125,27 @@ export const QuoteForm = () => {
             )}
           </div>
         ))}
-        <CustomButton
-          classes={`w-full ${submitResult ? "bg-green-400" : ""}`}
-          type="submit"
-          id={
-            submitResult
-              ? "quoteForm.submit.button.success"
-              : isLoading
-              ? "quoteForm.submit.button.loading"
-              : "quoteForm.submit.button"
-          }
-          disabled={submitResult}
-        />
+        <div className="w-full flex flex-row">
+          <CustomButton
+            classes={`w-full ${submitResult ? "bg-green-400" : ""}`}
+            type="submit"
+            id={
+              submitResult
+                ? "quoteForm.submit.button.success"
+                : isLoading
+                ? "quoteForm.submit.button.loading"
+                : "quoteForm.submit.button"
+            }
+            disabled={submitResult}
+          />
+          <CustomButton
+            classes="w-25 bg-dark py-2 px-4 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95 ml-2"
+            icon={<Phone />}
+            onClick={() =>
+              scrollToView(iconsInformation[contactInfo[1].type].target)
+            }
+          />
+        </div>
       </form>
     </div>
   );

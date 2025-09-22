@@ -8,6 +8,7 @@ import { TintProvider } from "@/provider/tint";
 import { Footer } from "@/components/footer";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
+import { PPFProvider } from "@/context/ppf";
 
 export const viewport = {
   themeColor: "#E52323",
@@ -57,12 +58,14 @@ export default function RootLayout({
         className={`${montserrat.className} flex flex-col row items-center bg-[#F2F2F2] `}>
         <TranslateProvider>
           <SwitchProvider>
-            <TintProvider>
-              <Navbar />
-              <div className="max-w-[2000px] w-full">{children}</div>
-              <Analytics />
-              <Footer />
-            </TintProvider>
+            <PPFProvider>
+              <TintProvider>
+                <Navbar />
+                <div className="max-w-[2000px] w-full">{children}</div>
+                <Analytics />
+                <Footer />
+              </TintProvider>
+            </PPFProvider>
           </SwitchProvider>
         </TranslateProvider>
       </body>

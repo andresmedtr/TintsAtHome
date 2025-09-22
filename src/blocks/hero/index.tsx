@@ -7,7 +7,9 @@ import { useTint } from "@/hooks/useTint";
 import { useSwitch } from "@/hooks/useToggle";
 import { scrollToView } from "@/utils/scrollToView";
 import { motion } from "framer-motion";
+import { SwitchButton } from "@/components/switchButton";
 import { FormattedMessage } from "react-intl";
+import { PpfAccordion } from "@/components/ppfAccordion/page";
 
 export const Model3D = () => {
   const { isActive } = useSwitch();
@@ -38,18 +40,27 @@ export const Model3D = () => {
           />
         </video>
       </div>
-      <div className="w-full h-fit flex justify-center py-[80px]  bg-white">
-        <div className="w-[90%] h-full flex flex-col-reverse gap-[40px] items-center justify-between xl:flex-row">
+      <div className="w-full h-fit justify-center py-[80px]  bg-white">
+        <div className="w-[90%] m-auto h-full flex flex-col-reverse gap-[40px] items-center justify-between xl:flex-row">
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="w-full h-full flex flex-col gap-[20px]">
+            <div className="w-full flex justify-center">
+              <SwitchButton />
+            </div>
             <h1 className="text-2xl font-bold text-center xl:text-5xl">
-              <FormattedMessage id="block.model3d.square.title" />
+              <FormattedMessage
+                id={`${
+                  !isActive
+                    ? "block.model3d.square.title"
+                    : "block.model3d.square.ppf.accordion"
+                }`}
+              />
             </h1>
             <div className="h-fit w-[100%] flex flex-col gap-[30px] text-sm xl:text-lg">
-              <TintAccordion />
+              {!isActive ? <TintAccordion /> : <PpfAccordion />}
             </div>
             <CustomButton
               classes="w-full lg:w-fit"
@@ -63,16 +74,18 @@ export const Model3D = () => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}>
             {/* shadow-[0_8px_24px_rgba(0,0,0,0.8)] */}
             <div className="relative bg-[#F2F2F2] h-[400px] rounded-lg overflow-hidden flex items-center lg:h-[500px] shadow-xl">
-              <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2">
-                <p className="text-sm font-semibold text-[#111111]">
-                  <FormattedMessage id={tintName} />
-                </p>
-              </div>
+              {!isActive && (
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2">
+                  <p className="text-sm font-semibold text-[#111111]">
+                    <FormattedMessage id={tintName} />
+                  </p>
+                </div>
+              )}
               <ModelViewer
                 src={
-                  isActive
+                  !isActive
                     ? "https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/g_wagon-Lng1Z2L9WuWNGZXVDsKZhcHQUlFf0o.glb"
-                    : "https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/house/house-GP4Zwy8YteIEFs1sAcyredbr91cvN9.glb"
+                    : "https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/car/g_wagon_ppf.glb"
                 }
                 alt="Un modelo 3D"
                 auto-rotate={true}

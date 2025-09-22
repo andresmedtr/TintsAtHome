@@ -21,13 +21,28 @@ export interface TintLevelProps {
   opacity: number;
 }
 
+export interface PPFContextType {
+  color: [number, number, number, number]; // RGBA
+  setColor: (color: [number, number, number, number]) => void;
+}
+
 export interface CardProps {
-  image?: string;
+  img?: string;
+  classes?: string;
+  children?: ReactNode;
   title?: string;
   price?: string;
   subtitle?: string;
   features?: string[];
   iconList?: { icon: JSX.Element; text: string }[];
+}
+
+export interface HeroSectionProps {
+  titleId: string;
+  buttonId: string;
+  modelSrc: string;
+  tintName?: string;
+  children?: React.ReactNode;
 }
 
 export interface ImagesProps {
@@ -121,7 +136,12 @@ export interface SocialMediaMap {
   email: SocialMediaItem;
 }
 
-export type SocialMediaType = "whatsapp" | "phone" | "instagram" | "email";
+export type SocialMediaType =
+  | "whatsapp"
+  | "phone"
+  | "instagram"
+  | "email"
+  | "location";
 
 export interface TintProps {
   children: (props: {
@@ -140,4 +160,12 @@ export interface CarWashContent {
   title: string;
   description: string;
   icon: ReactNode;
+}
+
+export interface Service {
+  service: string;
+  title: string;
+  image: string;
+  benefits: string[];
+  threeDModel?: string;
 }

@@ -4,12 +4,12 @@
   mask-image: linear-gradient(black 80%, transparent);
 }
 
-.benefits-section {
+.services-section {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
 
-  background-image: url("/benefits/benefitsBg.png");
+  background-image: url("/services/servicesBg.png");
 }
 
 /* .carwash-section {
