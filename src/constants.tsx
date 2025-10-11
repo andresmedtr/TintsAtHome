@@ -9,10 +9,18 @@ import {
   LegalTermsProps,
   CarWashContent,
   Service,
+  ServiceBenefit,
 } from "./types/globalTypes";
 import ShieldOutlinedIcon from "@mui/icons-material/ShieldOutlined";
 import DiamondOutlinedIcon from "@mui/icons-material/DiamondOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
+import SecurityIcon from "@mui/icons-material/Security";
+import ThermostatIcon from "@mui/icons-material/Thermostat";
+import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import TrendingDownIcon from "@mui/icons-material/TrendingDown";
+import PaidIcon from "@mui/icons-material/Paid";
+import FlareIcon from "@mui/icons-material/Flare";
 
 export const NavbarFields: string[] = [
   "navbar.title.home",
@@ -268,37 +276,90 @@ export const ppfColors: [number, number, number, number][] = [
   [255 / 255, 20 / 255, 147 / 255, 1], // #FF1493
 ];
 
-export const carBenefits: string[] = [
-  "block.services.card.car.1",
-  "block.services.card.car.2",
-  "block.services.card.car.3",
-  "block.services.card.car.4",
+// { icon: <SecurityIcon sx={{ color: "#E52323" }} />, id: "block.services.benefit.uvProtection" },
+// { icon: <ThermostatIcon sx={{ color: "#E52323" }} />, id: "block.services.benefit.cool" },
+// { icon: <AutoAwesomeIcon sx={{ color: "#E52323" }} />, id: "block.services.benefit.privacy" },
+// { icon: <CheckCircleIcon sx={{ color: "#E52323" }} />, id: "block.services.benefit.warranty" },
+
+export const carBenefits: ServiceBenefit[] = [
+  {
+    icon: <SecurityIcon sx={{ color: "#E52323" }} />,
+    text: "block.services.card.car.1",
+  },
+  {
+    icon: <ThermostatIcon sx={{ color: "#E52323" }} />,
+    text: "block.services.card.car.2",
+  },
+  {
+    icon: <AutoAwesomeIcon sx={{ color: "#E52323" }} />,
+    text: "block.services.card.car.3",
+  },
+  {
+    icon: <CheckCircleIcon sx={{ color: "#E52323" }} />,
+    text: "block.services.card.car.4",
+  },
 ];
 
-export const houseBenefits: string[] = [
-  "block.services.card.house.1",
-  "block.services.card.house.2",
-  "block.services.card.house.3",
-  "block.services.card.house.4",
+export const houseBenefits: ServiceBenefit[] = [
+  {
+    icon: <TrendingDownIcon sx={{ color: "#E52323" }} />,
+    text: "block.services.card.house.1",
+  },
+  {
+    icon: <AutoAwesomeIcon sx={{ color: "#E52323" }} />,
+    text: "block.services.card.house.2",
+  },
+  {
+    icon: <ThermostatIcon sx={{ color: "#E52323" }} />,
+    text: "block.services.card.house.3",
+  },
+  {
+    icon: <CheckCircleIcon sx={{ color: "#E52323" }} />,
+    text: "block.services.card.house.4",
+  },
 ];
-export const commercialBenefits: string[] = [
-  "block.services.card.commercial.1",
-  "block.services.card.commercial.2",
-  "block.services.card.commercial.3",
-  "block.services.card.commercial.4",
+export const commercialBenefits: ServiceBenefit[] = [
+  {
+    icon: <TrendingDownIcon sx={{ color: "#E52323" }} />,
+    text: "block.services.card.commercial.1",
+  },
+  {
+    icon: <ThermostatIcon sx={{ color: "#E52323" }} />,
+    text: "block.services.card.commercial.2",
+  },
+  {
+    icon: <CheckCircleIcon sx={{ color: "#E52323" }} />,
+    text: "block.services.card.commercial.3",
+  },
+  {
+    icon: <AutoAwesomeIcon sx={{ color: "#E52323" }} />,
+    text: "block.services.card.commercial.4",
+  },
 ];
-export const ppfBenefits: string[] = [
-  "block.services.card.ppf.1",
-  "block.services.card.ppf.2",
-  "block.services.card.ppf.3",
-  "block.services.card.ppf.4",
+export const ppfBenefits: ServiceBenefit[] = [
+  {
+    icon: <SecurityIcon sx={{ color: "#E52323" }} />,
+    text: "block.services.card.ppf.1",
+  },
+  {
+    icon: <AutoAwesomeIcon sx={{ color: "#E52323" }} />,
+    text: "block.services.card.ppf.2",
+  },
+  {
+    icon: <FlareIcon sx={{ color: "#E52323" }} />,
+    text: "block.services.card.ppf.3",
+  },
+  {
+    icon: <PaidIcon sx={{ color: "#E52323" }} />,
+    text: "block.services.card.ppf.4",
+  },
 ];
 
 export const servicesArray: Service[] = [
   {
     service: "automotive-tinting",
     title: "block.services.card.title.car.1",
-    image: "/services/tinting.png",
+    image: "/services/tinting.webp",
     benefits: carBenefits,
     threeDModel:
       "https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/g_wagon-Lng1Z2L9WuWNGZXVDsKZhcHQUlFf0o.glb",
@@ -306,7 +367,7 @@ export const servicesArray: Service[] = [
   {
     service: "paint-protection-film",
     title: "block.services.card.title.ppf.1",
-    image: "/services/ppf.jpeg",
+    image: "/services/ppf.webp",
     benefits: ppfBenefits,
     threeDModel:
       "https://vq4jjvoakgh0bglr.public.blob.vercel-storage.com/car/g_wagon_ppf.glb",

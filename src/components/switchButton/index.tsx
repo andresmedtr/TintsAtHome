@@ -89,7 +89,7 @@ export const SwitchButton = () => {
             ? "text-gray-500 font-light text-sm"
             : "text-[#E52323] font-semibold 2xl:text-2xl text-lg"
         }`}>
-        Paint Protection Film
+        PPF
       </p>
     </div>
   );

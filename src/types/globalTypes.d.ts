@@ -162,10 +162,15 @@ export interface CarWashContent {
   icon: ReactNode;
 }
 
+export interface ServiceBenefit {
+  icon: React.ReactNode;
+  text: string;
+}
+
 export interface Service {
   service: string;
   title: string;
   image: string;
-  benefits: string[];
+  benefits: ServiceBenefit[];
   threeDModel?: string;
 }
