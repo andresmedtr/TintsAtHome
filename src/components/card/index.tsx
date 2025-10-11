@@ -10,9 +10,10 @@ export const Card = ({ img, classes, children }: CardProps) => {
             src={img}
             alt="Card image"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover image"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1a1a1a]/60" />
         </div>
       ) : (
         ""
