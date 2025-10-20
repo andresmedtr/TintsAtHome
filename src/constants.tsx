@@ -281,81 +281,129 @@ export const ppfColors: [number, number, number, number][] = [
 // { icon: <AutoAwesomeIcon sx={{ color: "#E52323" }} />, id: "block.services.benefit.privacy" },
 // { icon: <CheckCircleIcon sx={{ color: "#E52323" }} />, id: "block.services.benefit.warranty" },
 
-export const carBenefits: ServiceBenefit[] = [
+export const ceramicCoatingBenefits: ServiceBenefit[] = [
   {
     icon: <SecurityIcon sx={{ color: "#E52323" }} />,
-    text: "block.services.card.car.1",
+    title: "block.services.card.benefit.ceramic.title.1", //Superior Protection
+    description: "block.services.card.benefit.ceramic.description.1",
   },
   {
     icon: <ThermostatIcon sx={{ color: "#E52323" }} />,
-    text: "block.services.card.car.2",
+    title: "block.services.card.benefit.ceramic.title.2", //UV Ray Defense
+    description: "block.services.card.benefit.ceramic.description.2",
   },
   {
     icon: <AutoAwesomeIcon sx={{ color: "#E52323" }} />,
-    text: "block.services.card.car.3",
+    title: "block.services.card.benefit.ceramic.title.3", //Mirror-Like Gloss
+    description: "block.services.card.benefit.ceramic.description.3",
   },
   {
     icon: <CheckCircleIcon sx={{ color: "#E52323" }} />,
-    text: "block.services.card.car.4",
+    title: "block.services.card.benefit.ceramic.title.4", //Long-Lasting Durability
+    description: "block.services.card.benefit.ceramic.description.4",
+  },
+];
+
+export const carBenefits: ServiceBenefit[] = [
+  {
+    icon: <SecurityIcon sx={{ color: "#E52323" }} />,
+    title: "block.services.card.benefit.car.title.1", // UV Protection
+    description: "block.services.card.benefit.car.description.1",
+  },
+  {
+    icon: <ThermostatIcon sx={{ color: "#E52323" }} />,
+    title: "block.services.card.benefit.car.title.2", // Heat Rejection
+    description: "block.services.card.benefit.car.description.2",
+  },
+  {
+    icon: <AutoAwesomeIcon sx={{ color: "#E52323" }} />,
+    title: "block.services.card.benefit.car.title.3", // Privacy & Style
+    description: "block.services.card.benefit.car.description.3",
+  },
+  {
+    icon: <CheckCircleIcon sx={{ color: "#E52323" }} />,
+    title: "block.services.card.benefit.car.title.4", // Comfort & Glare Reduction
+    description: "block.services.card.benefit.car.description.4",
   },
 ];
 
 export const houseBenefits: ServiceBenefit[] = [
   {
     icon: <TrendingDownIcon sx={{ color: "#E52323" }} />,
-    text: "block.services.card.house.1",
+    title: "block.services.card.benefit.house.title.1", // Energy Efficiency
+    description: "block.services.card.benefit.house.description.1",
   },
   {
     icon: <AutoAwesomeIcon sx={{ color: "#E52323" }} />,
-    text: "block.services.card.house.2",
+    title: "block.services.card.benefit.house.title.2", // Natural Light Balance
+    description: "block.services.card.benefit.house.description.2",
   },
   {
     icon: <ThermostatIcon sx={{ color: "#E52323" }} />,
-    text: "block.services.card.house.3",
+    title: "block.services.card.benefit.house.title.3", // Climate Control
+    description: "block.services.card.benefit.house.description.3",
   },
   {
     icon: <CheckCircleIcon sx={{ color: "#E52323" }} />,
-    text: "block.services.card.house.4",
+    title: "block.services.card.benefit.house.title.4", // Protect Interior Furnishings
+    description: "block.services.card.benefit.house.description.4",
   },
 ];
 export const commercialBenefits: ServiceBenefit[] = [
   {
     icon: <TrendingDownIcon sx={{ color: "#E52323" }} />,
-    text: "block.services.card.commercial.1",
+    title: "block.services.card.benefit.commercial.title.1", // Energy Savings
+    description: "block.services.card.benefit.commercial.description.1",
   },
   {
     icon: <ThermostatIcon sx={{ color: "#E52323" }} />,
-    text: "block.services.card.commercial.2",
+    title: "block.services.card.benefit.commercial.title.2", // Comfort & Productivity
+    description: "block.services.card.benefit.commercial.description.2",
   },
   {
     icon: <CheckCircleIcon sx={{ color: "#E52323" }} />,
-    text: "block.services.card.commercial.3",
+    title: "block.services.card.benefit.commercial.title.3", // Interior Protection
+    description: "block.services.card.benefit.commercial.description.3",
   },
   {
     icon: <AutoAwesomeIcon sx={{ color: "#E52323" }} />,
-    text: "block.services.card.commercial.4",
+    title: "block.services.card.benefit.commercial.title.4", // Professional Appearance
+    description: "block.services.card.benefit.commercial.description.4",
   },
 ];
 export const ppfBenefits: ServiceBenefit[] = [
   {
     icon: <SecurityIcon sx={{ color: "#E52323" }} />,
-    text: "block.services.card.ppf.1",
+    title: "block.services.card.benefit.ppf.title.1", // Scratch Resistance
+    description: "block.services.card.benefit.ppf.description.1",
   },
   {
     icon: <AutoAwesomeIcon sx={{ color: "#E52323" }} />,
-    text: "block.services.card.ppf.2",
+    title: "block.services.card.benefit.ppf.title.2", // Enhanced Gloss
+    description: "block.services.card.benefit.ppf.description.2",
   },
   {
     icon: <FlareIcon sx={{ color: "#E52323" }} />,
-    text: "block.services.card.ppf.3",
+    title: "block.services.card.benefit.ppf.title.3", // Self-Healing Surface
+    description: "block.services.card.benefit.ppf.description.3",
   },
   {
     icon: <PaidIcon sx={{ color: "#E52323" }} />,
-    text: "block.services.card.ppf.4",
+    title: "block.services.card.benefit.ppf.title.4", // Preserve Vehicle Value
+    description: "block.services.card.benefit.ppf.description.4",
   },
 ];
 
 export const servicesArray: Service[] = [
+  {
+    service: "ceramic-coating",
+    title: "block.services.card.title.ceramic.1",
+    description: "block.services.description.ceramic.1",
+    subtitle: "block.services.card.subtitle.ceramic.1",
+    image: "/services/ceramicCoating.webp",
+    benefits: ceramicCoatingBenefits,
+    media: "/services/ceramicCoating.webm",
+  },
   {
     service: "automotive-tinting",
     title: "block.services.card.title.car.1",
@@ -394,7 +442,7 @@ export const carWashServices: CarWashContent[] = [
   {
     title: "block.carwash.card.title.1",
     description: "block.carwash.card.description.1",
-    icon: <ShieldOutlinedIcon fontSize="large" className=" text-[#B3E5FC]" />,
+    icon: <ShieldOutlinedIcon fontSize="large" className=" text-[#E52323]" />,
   },
   {
     title: "block.carwash.card.title.2",
@@ -404,7 +452,18 @@ export const carWashServices: CarWashContent[] = [
   {
     title: "block.carwash.card.title.3",
     description: "block.carwash.card.description.3",
-    icon: <DiamondOutlinedIcon fontSize="large" className="text-[#b9f2ff]" />,
+    icon: <DiamondOutlinedIcon fontSize="large" className="text-[#E52323]" />,
   },
 ];
+
+export const carWashIncludes: Service = {
+  service: "carwash",
+  title: "block.carwash.title.2",
+  subtitle: "block.carwash.subtitle",
+  description: "block.carwash.description",
+  image: "/services/commercial.png",
+  benefits: carWashServices,
+  media: "/services/carwash.webm",
+};
+
 // End Services block

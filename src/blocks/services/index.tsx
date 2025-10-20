@@ -19,22 +19,20 @@ export const Services = () => {
           </h1>
         </div>
       </div>
-      <div className="w-full h-fit flex flex-col gap-5 justify-evenly items-center md:flex-row text-md">
+      <div className="w-full h-fit grid grid-cols md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 place-items-center text-md">
         {servicesArray.map((service) => (
           <Link key={service.service} href={`/services/${service.service}`}>
-            <Card img={service.image} key={service.service}>
+            <Card img={service.image} key={service.service} classes="mx-auto">
               <h3 className="w-fit text-white hover:text-red-500 transition-all duration-300 mb-4 text-start ms-2 md:text-lg md:font-extrabold border-b-2 border-red-500 pb-0.5">
                 <FormattedMessage id={service.title} />
               </h3>
               <div className="flex flex-col gap-8 p-6">
-                {service.benefits.map((benefit) => (
-                  <div
-                    key={benefit.text}
-                    className="leading-relaxed text-white/90">
+                {service.benefits.map((benefit, id) => (
+                  <div key={id} className="leading-relaxed text-white/90">
                     <div className="flex items-center gap-3">
                       {benefit.icon}
                       <p className="">
-                        <FormattedMessage id={benefit.text} />
+                        <FormattedMessage id={benefit.title} />
                       </p>
                     </div>
                   </div>

@@ -159,18 +159,23 @@ export interface LegalTermsProps {
 export interface CarWashContent {
   title: string;
   description: string;
+  details?: string;
   icon: ReactNode;
 }
 
 export interface ServiceBenefit {
   icon: React.ReactNode;
-  text: string;
+  title: string;
+  description: string;
 }
 
 export interface Service {
   service: string;
   title: string;
+  subtitle?: string;
+  description?: string;
   image: string;
   benefits: ServiceBenefit[];
   threeDModel?: string;
+  media?: string;
 }
