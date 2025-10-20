@@ -3,7 +3,10 @@ import { CardProps } from "../../types/globalTypes";
 
 export const Card = ({ img, classes, children }: CardProps) => {
   return (
-    <div className="rounded-xl overflow-hidden shadow-md w-full max-w-[320px] bg-[#1a1a1a] transition-all duration-300 transform hover:scale-105  hover:shadow-[0_8px_24px_rgba(229,35,35,0.5)] cursor-pointer">
+    <div
+      className={`rounded-xl overflow-hidden shadow-md w-full  ${
+        img && "bg-[#1a1a1a] max-w-[320px]"
+      } transition-all duration-300 transform hover:scale-105  hover:shadow-[0_8px_24px_rgba(229,35,35,0.5)] cursor-pointer`}>
       {img ? (
         <div className="relative w-full h-[200px]">
           <Image
@@ -18,7 +21,9 @@ export const Card = ({ img, classes, children }: CardProps) => {
       ) : (
         ""
       )}
-      <div className={classes ? classes : "p-6 gap-4"}>{children}</div>
+      <div className={`rounded-xl ${classes ? classes : "p-6 gap-4"}`}>
+        {children}
+      </div>
     </div>
   );
 };
