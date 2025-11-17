@@ -12,7 +12,7 @@ export const Footer = () => {
         <div className="grid-cols-1 mx-auto md:mx-0">
           <Link href="/">
             <Image
-              src="/logo/logo2.png"
+              src="/logo/tintsNewLogo.webp"
               width={100}
               height={100}
               alt="TintBiz logo Navbar"

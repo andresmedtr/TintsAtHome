@@ -71,17 +71,17 @@ export const TintLevel: TintLevelProps[] = [
 // About us
 export const achievementStats: AchievementProps[] = [
   {
-    end: 500,
+    end: 1200,
     label: "companyAchievements.description.1",
     delay: 800,
   },
   {
-    end: 200,
+    end: 500,
     label: "companyAchievements.description.2",
     delay: 800,
   },
   {
-    end: 8,
+    end: 9,
     label: "companyAchievements.description.3",
     delay: 400,
   },
