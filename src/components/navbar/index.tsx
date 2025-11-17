@@ -9,7 +9,7 @@ export const Navbar = () => {
         <div className="w-fit h-full">
           <Link href="/">
             <Image
-              src="/logo/logo2.png"
+              src="/logo/tintsNewLogo.webp"
               priority
               width={100}
               height={100}
