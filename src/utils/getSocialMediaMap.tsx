@@ -21,7 +21,7 @@ export const getSocialMediaMap = (): Record<
   },
   instagram: {
     icon: <Instagram />,
-    target: "https://www.instagram.com/tintsathomefl/",
+    target: "https://www.instagram.com/tintsathome_fl/",
   },
   email: {
     icon: <Email />,
