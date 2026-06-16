@@ -166,7 +166,7 @@ export const contactInfo: ContactInfoItems[] = [
     text: "tintsathomefl",
     type: "instagram",
   },
-  { text: "2051 NW 112th Ave Ste 119, Miami, FL 33172", type: "location" },
+  { text: "7301 NW 34th St, Miami, FL 33122", type: "location" },
 ];
 
 export const businessHours: string[] = [
