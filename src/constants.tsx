@@ -163,7 +163,7 @@ export const contactInfo: ContactInfoItems[] = [
     type: "email",
   },
   {
-    text: "tintsathomefl",
+    text: "tintsathome_fl",
     type: "instagram",
   },
   { text: "7301 NW 34th St, Miami, FL 33122", type: "location" },
@@ -201,11 +201,11 @@ export const footerInfo: FooterType[] = [
       },
       {
         text: "footer.title.3.description.2",
-        target: "https://www.instagram.com/tintsathomefl/",
+        target: "https://www.instagram.com/tintsathome_fl/",
       },
       {
         text: "footer.title.3.description.3",
-        target: "https://www.instagram.com/tintsathomefl/",
+        target: "https://www.instagram.com/tintsathome_fl/",
       },
     ],
   },
